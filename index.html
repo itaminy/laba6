@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор стоимости пиццы</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="calculator">
+    <div class="pizza-icon">🍕</div>
+    <h1>Калькулятор стоимости пиццы</h1>
+
+    <div class="form-group">
+        <label for="quantity">Количество пицц:</label>
+        <input type="number" id="quantity" min="1" value="1">
+    </div>
+
+    <div class="form-group">
+        <label>Тип пиццы:</label>
+        <div class="radio-group">
+            <div class="radio-option">
+                <input type="radio" id="type1" name="pizzaType" value="margarita" checked>
+                <label for="type1">Маргарита (450 руб.) - базовая</label>
+            </div>
+            <div class="radio-option">
+                <input type="radio" id="type2" name="pizzaType" value="pepperoni">
+                <label for="type2">Пепперони (550 руб.) - с выбором размера</label>
+            </div>
+            <div class="radio-option">
+                <input type="radio" id="type3" name="pizzaType" value="fourCheese">
+                <label for="type3">Четыре сыра (600 руб.) - с дополнительными опциями</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group hidden" id="optionsGroup">
+        <label for="options">Размер пиццы:</label>
+        <select id="options">
+            <option value="standard">Стандартный 30см (+0 руб.)</option>
+            <option value="large">Большая 40см (+100 руб.)</option>
+            <option value="xl">Огромная 50см (+200 руб.)</option>
+        </select>
+    </div>
+
+    <div class="form-group hidden" id="propertyGroup">
+        <div class="checkbox-option">
+            <input type="checkbox" id="property">
+            <label for="property">Двойная порция сыра (+50 руб. за пиццу)</label>
+        </div>
+    </div>
+
+    <div class="result">
+        <div>Общая стоимость:</div>
+        <div class="price" id="totalPrice">450 руб.</div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
